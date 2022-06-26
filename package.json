@@ -1,16 +1,16 @@
 {
-  "name": "parcel-project-template",
+  "name": "team-project-js-filmoteka",
   "version": "1.1.0",
   "description": "",
   "main": "index.js",
-  "homepage": "https://AnnaFesenko7.github.io/filmoteka",
+  "homepage": "https://AnnaFesenko7.github.io/team-project-js-filmoteka",
   "scripts": {
     "dev": "parcel src/*.html",
-    "build": "parcel build src/*.html --public-url /filmoteka/"
+    "build": "parcel build src/*.html --public-url /team-project-js-filmoteka/"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/goitacademy/parcel-project-template.git"
+    "url": "git+https://github.com/AnnaFesenko7/team-project-js-filmoteka"
   },
   "keywords": [],
   "author": "Alexander Repeta <alexander.repeta@gmail.com>",
