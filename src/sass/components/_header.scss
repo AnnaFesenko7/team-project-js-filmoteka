@@ -1,0 +1,245 @@
+.header {
+  margin: 0 auto;
+  padding-top: 40px;
+  padding-bottom: 60px;
+  max-height: 216px;
+
+  background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+    url('../images/header-bg.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  &.header-fon {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+      url('../images/lybrary-bg.jpg');
+  }
+}
+
+.js-header {
+  padding-bottom: 35px;
+
+  @media screen and (min-width: 768px) {
+    padding-bottom: 45px;
+  }
+
+  @media screen and (min-width: 1024px) {
+    padding-bottom: 47px;
+  }
+}
+
+.header__nav {
+  display: flex;
+  justify-content: space-between;
+}
+.header__logo {
+  font-weight: 500;
+  font-size: 30px;
+  line-height: 35px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+
+  color: #ffffff;
+}
+
+.header__icon {
+  margin-right: 10px;
+}
+
+.header__list {
+  display: flex;
+}
+.header__item {
+  margin-left: 40px;
+}
+
+.header__btn {
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.17;
+
+  // display: flex;
+  // align-items: center;
+  // text-align: center;
+  text-transform: uppercase;
+  position: relative;
+
+  color: #ffffff;
+
+  &.current::after {
+    content: '';
+    width: 100%;
+    height: 3px;
+    display: block;
+    position: absolute;
+    bottom: -3px;
+    background-color: #ff6b08;
+  }
+}
+
+.header__form-flex {
+  margin-bottom: 0;
+  margin-top: 47px;
+  display: flex;
+  justify-content: center;
+}
+
+// .header__form {
+//   position: relative;
+//   justify-content: center;
+// }
+.input-error {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 0);
+  margin-bottom: 0;
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.14;
+  align-items: center;
+  text-align: center;
+  color: #ff001b;
+}
+
+.form__label {
+  position: relative;
+}
+
+//  .input-error-active {
+//   color: red;
+//   position: absolute;
+//   top: 35px;
+//   left: 65px;
+//   display: block;
+//  }
+
+.form__input {
+  background-color: transparent;
+  border: none;
+  border-bottom: 0.5px solid #818181;
+  width: 280px;
+  color: #ffffff;
+
+  @media screen and (min-width: 768px) {
+    width: 336px;
+  }
+}
+
+// .form__input:active{
+//   background-color: transparent;
+//   border: none;
+//   border-bottom: 0.5px solid #818181;
+// }
+
+.form__input::placeholder {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.14;
+  display: flex;
+  align-items: center;
+
+  color: #ffffff;
+  background-color: transparent;
+}
+
+.form__btn {
+  background-color: transparent;
+  border: none;
+  border-bottom: 0.5px solid #818181;
+  padding: 0;
+  line-height: 0;
+  position: relative;
+  bottom: 0;
+  right: 13px;
+}
+
+.form__input:focus-within {
+  background-color: transparent;
+  outline: none;
+  border: none;
+  border-bottom: 0.5px solid #818181;
+}
+
+.header__name {
+  @media screen and (max-width: 767px) {
+    display: none;
+    position: absolute;
+  }
+}
+
+.header_buttons-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+.library-buttons-list {
+  display: inline-flex;
+  justify-content: center;
+}
+
+.library-buttons-item {
+  display: block;
+  &:not(:first-child) {
+    margin-left: 16px;
+  }
+}
+
+.library-btn {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.33;
+  color: #ffffff;
+
+  width: 147px;
+  height: 42px;
+
+  display: flex;
+  align-items: center;
+  text-align: center;
+  text-transform: uppercase;
+  justify-content: center;
+
+  background: rgba(0, 0, 0, 0.56);
+  // border-color: transparent;
+
+  border: 1px solid #ffffff;
+  border-radius: 5px;
+}
+
+.library-btn.active {
+  background: #ff6b01;
+  border: #ff6b01;
+  box-shadow: 0px 8px 43px rgba(255, 107, 1, 0.6);
+}
+
+.js-library-empty {
+  padding-top: 100px;
+  padding-bottom: 200px;
+}
+
+.display-none {
+  display: none;
+}
+
+.select {
+  border: none;
+  border-radius: 3px;
+  background-color: #545454;
+  margin-right: 15px;
+}
+
+.select:focus > option:checked {
+  background-color: #ff6b08;
+}
+
+.select:hover {
+  background: #545454;
+}

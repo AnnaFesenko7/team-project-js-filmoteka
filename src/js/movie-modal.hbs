@@ -1,0 +1,58 @@
+<div class='modal'>
+  <button type='button' class='modal__btn--close' data-modal-close></button>
+  <div class='modal-left'>
+    {{#if poster_path}}
+      <img
+        class='modal__img'
+        src='https://image.tmdb.org/t/p/w500{{poster_path}}'
+        alt='{{original_title}}'
+      />
+    {{else}}
+      <img
+        class='modal__img'
+        src='https://raw.githubusercontent.com/h0wter/JS-Project/main/src/images/default_img/filmoteka.jpg'
+        alt='{{original_title}}'
+      />
+    {{/if}}
+  </div>
+  <div class='modal-right'>
+    <h1 class='modal__title' data-id={{id}}>{{#if
+        original_title
+      }}{{original_title}}{{/if}}{{original_name}}</h1>
+    <table class='modal-subtitles'>
+      <tr class='modal-subtitles__item'>
+        <td class="modal-subtitles__item--label">Vote / Votes</td>
+        <td class="modal-subtitles__item--value">
+          <span class='modal-vote modal-vote--avg'>{{vote_average}}</span>
+         /
+          <span class='modal-vote modal-vote--count'>{{vote_count}}</span>
+        </td>
+      </tr>
+      <tr class='modal-subtitles__item'>
+        <td class="modal-subtitles__item--label">Popularity</td>
+        <td class="modal-subtitles__item--value">{{popularity}}</td>
+      </tr>
+      <tr class='modal-subtitles__item'>
+        <td class="modal-subtitles__item--label">Original Title</td>
+        <td class="modal-subtitles__item--value">{{#if
+          original_title
+        }}{{original_title}}{{/if}}{{original_name}}</td>
+      </tr>
+     {{#if genreNames}}
+      <tr class='modal-subtitles__item'>
+        <td class="modal-subtitles__item--label ">Genre</td>
+        <td class="modal-subtitles__item--value">{{genreNames}}</td>
+      </tr>
+      {{/if}}
+    </table>
+    <h2 class='modal-about__title'>ABOUT</h2>
+    <p class='modal-about__text'>{{overview}}</p>
+    <ul class='modal-buttons__list'>
+      <li><button type='button' class='modal__btn modal__btn--watch'>Add to Watched</button></li>
+      <li><button type='button' class='modal__btn modal__btn--queue'>Add to Queue</button></li>
+</ul>
+      {{#if video}}
+          <div class="btn-trailer-modal">  <button type="button" class="modal__btn modal__btn--player">Trailer</button> </div>
+      {{/if}}
+    
+
